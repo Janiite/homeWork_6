@@ -10,6 +10,7 @@
     height: 10vh;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 body {
@@ -37,3 +38,41 @@ ul li {
     font-size: larger;
     text-transform:uppercase; 
 }
+
+.hamburger {
+    padding-right: 5vw;
+    display: none;
+}
+
+.hamburger div {
+    width: 35px;
+    height: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+   .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        background-color: violet;
+        width: 100%;
+        position: absolute;
+        /*display: flex;
+        flex-direction: column;
+        text-align: end;*/
+    } 
+
+    .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+    }
+}
+
+    
+
